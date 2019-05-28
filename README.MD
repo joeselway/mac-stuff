@@ -1,2 +1,5 @@
-A repository of Mac stuff (mainly scripts) that needs a better home…
+#Mac stuff
 
+Here be dragons.
+
+Also scripts.
