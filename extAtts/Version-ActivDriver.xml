@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extensionAttribute>
+<displayName>Version-ActivDriver</displayName>
+<description>Detect version of ActivDriver</description>
+<dataType>string</dataType>
+<scriptContentsMac>#!/bin/sh&#13;
+&#13;
+if [ -f "/Applications/Promethean/ActivDriver/ACTIVdriver ReadMe.txt" ] ; then&#13;
+	VERSION=$( cat /Applications/Promethean/ActivDriver/ACTIVdriver\ ReadMe.txt | grep Release | cut -d " " -f 2 | head -n 1 )&#13;
+else&#13;
+	VERSION="Not Installed"&#13;
+fi&#13;
+&#13;
+echo "&lt;result&gt;$VERSION&lt;/result&gt;"</scriptContentsMac>
+<scriptContentsWindows/>
+</extensionAttribute>

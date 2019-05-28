@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extensionAttribute>
+<displayName>Version-Java6</displayName>
+<description>Detect version of Java 6 for OSX</description>
+<dataType>string</dataType>
+<scriptContentsMac>#!/bin/sh&#13;
+&#13;
+if [ -f "/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Info.plist" ] ; then&#13;
+	VERSION=$( defaults read /Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Info.plist JavaVM | grep JVMVersion | cut -d \" -f 2 )&#13;
+else&#13;
+	VERSION="Not Installed"&#13;
+fi&#13;
+&#13;
+echo "&lt;result&gt;$VERSION&lt;/result&gt;"</scriptContentsMac>
+<scriptContentsWindows/>
+</extensionAttribute>
