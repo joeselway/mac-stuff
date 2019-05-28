@@ -1,7 +1,6 @@
 #!/bin/bash
 
-## Installs and trusts root and SHA256 intermediate CA identities for schools.sa.edu.au. 
-## 
+# Installs and trusts root and SHA256 intermediate CA identities for schools.sa.edu.au. 
 
 echo 'Installing SAEDU CA Identities'
 
